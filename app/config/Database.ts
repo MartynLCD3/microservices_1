@@ -1,10 +1,10 @@
 import { Sequelize } from 'sequelize';
 import './environment/environment';
 
-const databaseName = `${process.env.DATABASE_NAME}`;
-const databaseUser = `${process.env.DATABASE_USER}`;
-const databasePass = `${process.env.DATABASE_PASSWORD}`;
-const databasePort = `${process.env.DATABASE_PORT}`;
+const databaseName: string = `${process.env.DATABASE_NAME}`;
+const databaseUser: string = `${process.env.DATABASE_USER}`;
+const databasePass: string = `${process.env.DATABASE_PASSWORD}`;
+const databasePort: string = `${process.env.DATABASE_PORT}`;
 
 export const db = new Sequelize(databaseName, databaseUser, databasePass, {
 	dialect: 'mariadb',

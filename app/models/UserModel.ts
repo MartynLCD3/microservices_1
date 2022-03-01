@@ -1,7 +1,7 @@
 import { DataTypes } from 'sequelize';
 import { db } from '../config/Database';
 
-export const UserModel = db.define('user', {
+export const UserModel: any = db.define('user', {
 	id: {
 		type: DataTypes.INTEGER,
 		autoIncrement: true,
@@ -10,6 +10,7 @@ export const UserModel = db.define('user', {
 	},
 	email: {
 		type: DataTypes.STRING,
+		unique: true,
 		allowNull: false
 	},
 	name: {
