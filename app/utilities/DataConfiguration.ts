@@ -1,5 +1,4 @@
 class DataConfiguration {
-	
 	captureInformation(information: any): Promise<any> {
 		return new Promise(resolve => {
 			let body = '';

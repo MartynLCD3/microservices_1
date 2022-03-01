@@ -2,7 +2,6 @@ import { UserModel } from '../models/UserModel';
 import DataConfiguration from '../utilities/DataConfiguration';
 
 class UserController {
-
 	async getAllUsers(): Promise<any> {
 		const users: any = await UserModel.findAll();
 		return users.length > 0 ? { code: 200, notification: users } : { code: 404, notification: [] };	

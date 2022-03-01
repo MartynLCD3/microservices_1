@@ -4,7 +4,6 @@ const apiRoute = System.apiRoute();
 const notification = System.getRoutes();
 
 class API {
-
 	async processRequest(request: any): Promise<any> {
 
 		const { url, method }: { url: string, method: string } = request;
