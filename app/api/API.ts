@@ -28,7 +28,7 @@ class API {
 			return notification;
 			break;
 		case 'PUT':
-			if(url.includes(`${apiRoute}/update-user`) && url.match(/%26ID=/) || url.match(/%26ID=/)) {
+			if(url.includes(`${apiRoute}/update-user`) && url.match(/&ID=/) || url.match(/%26ID=/)) {
 				return await UserController.updateUser(request, url);
 			}
 
