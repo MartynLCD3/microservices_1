@@ -5,7 +5,7 @@ import API from '../api/API';
 
 class HttpServer {
 	run(): void {
-		http.createServer(async (request: any, response: any): Promise<any> => {
+		http.createServer(async (request: any, response: any): Promise<void> => {
 			db.sync();
 			const { code, notification }: { code: number, notification: string } = await API.processRequest(request);
 			if(code && notification) {
